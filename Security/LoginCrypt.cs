@@ -77,7 +77,7 @@ namespace Security
             check |= (data[i + 2] << 0x10) & 16711680L;
             check |= (data[i + 3] << 0x18) & 4278190080L;
 
-            return chksum == 0;
+            return chksum == check;
         }
 
         public static void AppendChecksum(byte[] raw, int offset, int size)
